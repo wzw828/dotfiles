@@ -1,7 +1,7 @@
 autocmd! bufwritepost .vimrc source ~/.vimrc    "vimrc文件修改后自动载入
 
 "==========主题界面==========
-"colorscheme Tomorrow-Night-Bright
+"colorscheme Tomorrow-Night-Bright 	
 colorscheme gruvbox
 
 
@@ -11,19 +11,19 @@ colorscheme gruvbox
 syntax on           "语法高亮
 
 set nocompatible        "不使用vi键盘模式，使用vim自己的
-"set background=dark     "背景使用黑色
+"set background=dark     ""背景使用黑色
 set number            	"显示行号
-set guifont=Monaco_for_Powerline:h14   "设置字体，字体名称和字号
+set guifont=Monaco_for_Powerline:h14   " 设置字体，字体名称和字号
 set cursorline
 set showcmd
 set scrolloff=3
 set autoread            "文件在Vim之外修改过，自动重新读入
 set ruler               "显示位置指示器
 set laststatus=1        "始终显示状态栏
-set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [POS=%l,%v][%p%%]\ %{strftime(\"%d/%m/%y\ -\ %H:%M\")}             "状态行显示的内容 
+set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [POS=%l,%v][%p%%]\ %{strftime(\"%d/%m/%y\ -\ %H:%M\")}             ""状态行显示的内容 
 set history=500         "纪录历史纪录行数
 set autoindent          "自动缩进
-"set smartindent         "智能选择对齐方式
+"set smartindent         ""智能选择对齐方式
 set tabstop=4           "设置tab键为4个空格
 set shiftwidth=4        "设定自动缩进为4个字符
 set expandtab           "用空格键替代tab的输入
@@ -89,7 +89,7 @@ autocmd vimenter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif   "当NERDTree是唯一窗口时自动关闭
 autocmd vimenter * if !argc()|NERDTree|endif    "打开vim时如果没有文件自动打开NERDTree
 "let NERDTreeChDirMode=2        ""选中root即设置为当前目录
-"let NERDTreeDirArrows=0        "目录箭头 1:显示箭头、0:传统+-号; 
+"let NERDTreeDirArrows=0        ""目录箭头 1:显示箭头、0:传统+-号; 
 let NERDTreeWinPos='right'      "目录树位置 0/left:左侧、1/right:右侧
 let NERDTreeQuitOnOpen=0        "打开文件时关闭树
 let g:NERDTreeSize=30           "窗口尺寸
@@ -118,7 +118,7 @@ nmap ga <Plug>(EasyAlign)
 
 "Vim Table Mode配置----------
 let g:table_mode_corner = '|'           "用此选项定义表角字符
-"let g:table_mode_delimiter = ' '       "使用此选项定义要使用的分隔符
+"let g:table_mode_delimiter = ' '       ""使用此选项定义要使用的分隔符
 let g:table_mode_border=0
 let g:table_mode_fillchar=' '
 
@@ -140,7 +140,7 @@ inoreabbrev <expr> __
 "Pydiction配置(python代码片段)----------
 "filetype plugin on
 "let g:pydiction_location = '~/.vim/plugged/pydiction/complete-dict'
-"let g:pydiction_menu_height = 69     "提示显示数量
+"let g:pydiction_menu_height = 69     ""提示显示数量
 "End
 
 

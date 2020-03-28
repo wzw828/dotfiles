@@ -78,7 +78,7 @@ alias v='nvim'
 alias javac='javac -J-Dfile.encoding=utf8'
 
 # 指定程序打开文件
-# alias -s html=subl     #.html文件 sublime text 中打开
+# alias -s html=subl     #在sublime text中打开.html文件
 # alias -s rb=subl
 # alias -s py=subl
 # alias -s js=subl
@@ -91,8 +91,11 @@ alias javac='javac -J-Dfile.encoding=utf8'
 alias show='defaults write com.apple.finder AppleShowAllFiles -bool true'
 alias hide='defaults write com.apple.finder AppleShowAllFiles -bool false'
 
-# mac 终端使用 vscode
+# 常用编辑器
+#alias code='/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code'
 alias code='/Applications/Developer\ Tools/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code'
+alias subl='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
+alias atom='/Applications/Atom.app/Contents/MacOS/Atom'
 
 
 # 书签

@@ -1,4 +1,4 @@
-alias zshconfig='vim ~/.zshrc'
+alias zshconf='code ~/.zshrc'
 
 # 导航
 alias ..='cd ..'
@@ -6,7 +6,7 @@ alias .2='cd ../..'
 alias .3='cd ../../..'
 alias .4='cd ../../../..'
 alias .5='cd ../../../../..'
-alias ~='cd ~'
+#alias ~='cd ~'
 alias -- -='cd -'
 alias c1='cd -'
 alias c2='cd -2'
@@ -16,35 +16,35 @@ alias c5='cd -5'
 
 # 终端返回显示
 alias grep='grep --color=auto'
-alias ls='ls -Fh --color=auto --group-directories-first'
+#alias ls='ls -Fh --color=auto --group-directories-first'
 alias l='ls -l'
-alias la='ls -a'
-alias la='ls -lR'
+alias la='ls -a'  #显示隐藏文件
+alias lr='ls -lR'
 alias ll='ls -lh'
-alias lr='ls -R'
-alias lsa='ls -lha'
+alias lha='ls -lha'
 alias lt='ls -lht'
-alias lf='ls -l | grep "^-"'
-alias l.f='ls -ld .* | grep "^-"'
-alias ld='ls -l | grep "^d"'
-alias l.d='ls -ld .* | grep "^d"'
-alias dud='du -d 1 -h'
-alias duf='du -sh *'
-alias fdir='find . -type d -name'
-alias ff='find . -type f -name'
-alias hgrep='history | grep'
-alias h='history'
-alias lgrep='ls -l | grep'
-alias lagrep='ls -lA | grep'
-alias sgrep='grep -R -n -H -C 5 --exclude-dir={.git,.svn,.tldr,node_modules,Trash,vendor}'
+# alias lf='ls -l | grep "^-"'
+# alias l.f='ls -ld .* | grep "^-"'
+# alias ld='ls -l | grep "^d"'
+# alias l.d='ls -ld .* | grep "^d"'
+# alias dud='du -d 1 -h'
+# alias duf='du -sh *'
+# alias fdir='find . -type d -name'
+# alias ff='find . -type f -name'
+# alias hgrep='history | grep'
+# alias h='history'
+# alias lgrep='ls -l | grep'
+# alias lagrep='ls -lA | grep'
+# alias sgrep='grep -R -n -H -C 5 --exclude-dir={.git,.svn,.tldr,node_modules,Trash,vendor}'
 
 # 操作
+alias cls='clear'
 alias cp='cp -iv'
 alias mv='mv -iv'
 alias ln='ln -iv'
 alias mkdir='mkdir -v'
 alias rm='rm -i'
-alias rmf='rm -rf'
+# alias rmf='rm -rf'
 alias p='ps axo pid,user,pcpu,comm'
 alias uptime='uptime -p'
 alias free='free -h'
@@ -59,20 +59,27 @@ alias alu='apt list --upgradable'
 alias preview='fzf --height=50% --layout=reverse --preview="bat --color=always {}"'
 
 # 快捷键
-alias cls='clear'
 alias e='exit'
 alias myip='curl cip.cc'    #显示公网ip
 alias ip-address='curl -s -H "Accept: application/json" https://ipinfo.io/json | jq "del(.loc, .postal, .readme)"'
 alias timer='echo "Timer started. Stop with Ctrl-D." && date "+%a, %d %b %H:%M:%S" && time cat && date "+%a, %d %b %H:%M:%S"'
-alias gz='tar -xzvf'  #解压gz
-alias tgz='tar -xzvf'  #解压gz
+alias ra='ranger'
+
+# 解压缩
+alias tgz='tar -zxvf'  #解压gz
+alias tgz='tar -zxvpf'  #保留原本文件属性解亚
 alias zip='unzip'
 alias bz2='tar -xjvf'
+
+# 压缩
+alias newgz='tar -zcvf'    #打包以 gzip 压缩
+alias newtgz='tar -zxvpf'    #保留原本文件属性压缩
+alias newbz='tar -jcvf'    #打包以 bzip2 压缩
 
 # Developer shortcuts
 alias vi='vim'
 alias g='git'
-alias python='python3'
+#alias python='python3'
 alias s='subl'
 alias v='nvim'
 alias javac='javac -J-Dfile.encoding=utf8'
@@ -92,13 +99,13 @@ alias show='defaults write com.apple.finder AppleShowAllFiles -bool true'
 alias hide='defaults write com.apple.finder AppleShowAllFiles -bool false'
 
 # 常用编辑器
-#alias code='/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code'
-alias code='/Applications/Developer\ Tools/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code'
-alias subl='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
+alias code='/Applications/Dev/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code'
+alias subl='/Applications/Dev/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
 alias atom='/Applications/Atom.app/Contents/MacOS/Atom'
 
 
 # 书签
 alias dl='cd ~/Downloads && ls -lA'
 alias doc='cd ~/Documents && ls -lA'
-alias tmp='cd ~/Temporary && ls -lA'
+alias tmp='cd ~/temp && ls -lA'
+alias dev='cd ~/dev'

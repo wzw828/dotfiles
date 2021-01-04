@@ -7,6 +7,9 @@ export ZSH=/Users/wzw/.oh-my-zsh
 ZSH_THEME="zeta"
 # others:"ys, powerline, gentoo, avit, honukai"
 
+# 解决粘贴慢
+DISABLE_MAGIC_FUNCTIONS=true
+
 # Uncomment the following line to use case-sensitive completion
 # CASE_SENSITIVE="true"
 

@@ -144,6 +144,10 @@ inoreabbrev <expr> __
 "End
 
 
+"FZF设置----------
+"先安装 brew install fzf
+".zshrc配置：$(brew --prefix)/usr/local/opt/fzf/install
+set rtp+=/usr/local/opt/fzf
 
 
 "==========其他设置==========

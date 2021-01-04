@@ -7,6 +7,9 @@ export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 export COMPLETION_WAITING_DOTS="true"
 
+# 解决粘贴慢
+DISABLE_MAGIC_FUNCTIONS=true
+
 # 禁用自动更新
 DISABLE_UPDATE_PROMPT=true
 

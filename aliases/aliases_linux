@@ -1,12 +1,9 @@
-alias zshconfig='vim ~/.zshrc'
-
 # 导航
 alias ..='cd ..'
 alias .2='cd ../..'
 alias .3='cd ../../..'
 alias .4='cd ../../../..'
 alias .5='cd ../../../../..'
-alias ~='cd ~'
 alias -- -='cd -'
 alias c1='cd -'
 alias c2='cd -2'
@@ -14,24 +11,28 @@ alias c3='cd -3'
 alias c4='cd -4'
 alias c5='cd -5'
 
+# 书签
+alias ~='cd ~'
+alias dl='cd ~/Downloads && ls -lA'
+alias doc='cd ~/Documents && ls -lA'
+
 # 终端返回显示
 alias grep='grep --color=auto'
-alias ls='ls -Fh --color=auto --group-directories-first'
 alias l='ls -l'
 alias la='ls -a'
-alias la='ls -lR'
 alias ll='ls -lh'
-alias lr='ls -R'
-alias lsa='ls -lha'
+alias lr='ls -R'        # 递归列出文件
+alias lss='ls -lhS'     # 从大到小排序
+alias lsa='ls -lha'     # 显示隐藏文件
 alias lt='ls -lht'
-alias lf='ls -l | grep "^-"'
+# alias lf='ls -l | grep "^-"'      # 只显示以-开头的文件
 alias l.f='ls -ld .* | grep "^-"'
-alias ld='ls -l | grep "^d"'
-alias l.d='ls -ld .* | grep "^d"'
-alias dud='du -d 1 -h'
-alias duf='du -sh *'
-alias fdir='find . -type d -name'
-alias ff='find . -type f -name'
+alias ld='ls -l | grep "^d"'        # 只显示文件夹
+alias ldf='ls -ld .* | grep "^d"'   # 只显示.隐藏文件
+alias dud='du -d 1 -h'              # 一级目录大小
+alias duf='du -sh *'                # 汇总查看文件夹大小
+alias fdir='find . -type d -name'   # 指定关键词查找文件夹
+alias ff='find . -type f -name'     # 指定关键词查找文件
 alias hgrep='history | grep'
 alias h='history'
 alias lgrep='ls -l | grep'
@@ -44,7 +45,7 @@ alias mv='mv -iv'
 alias ln='ln -iv'
 alias mkdir='mkdir -v'
 alias rm='rm -i'
-alias rmf='rm -rf'
+alias rmf='sh $HOME/.local/script/remove.sh'
 alias p='ps axo pid,user,pcpu,comm'
 alias uptime='uptime -p'
 alias free='free -h'
@@ -70,11 +71,9 @@ alias zip='unzip'
 alias bz2='tar -xjvf'
 
 # Developer shortcuts
-alias vi='vim'
-alias g='git'
-alias python='python3'
-alias s='subl'
 alias v='nvim'
+alias vi='nvim'
+alias g='git'
 alias javac='javac -J-Dfile.encoding=utf8'
 
 # 指定程序打开文件
@@ -85,12 +84,3 @@ alias javac='javac -J-Dfile.encoding=utf8'
 # alias -s c=vim
 # alias -s java=vim
 # alias -s txt=vim
-
-
-# 书签
-alias dl='cd ~/Downloads && ls -lA'
-alias doc='cd ~/Documents && ls -lA'
-alias tmp='cd ~/Temporary && ls -lA'
-
-
-

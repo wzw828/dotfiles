@@ -10,17 +10,17 @@ export COMPLETION_WAITING_DOTS="true"
 # 解决粘贴慢
 DISABLE_MAGIC_FUNCTIONS=true
 
-# 禁用自动更新
+# 禁用自动更新提示
 DISABLE_UPDATE_PROMPT=true
+
+# 关闭每两周一次的自动检查更新
+# DISABLE_AUTO_UPDATE="true"
 
 # 使用区分大小写的命令补全
 # CASE_SENSITIVE="true"
 
 # 使用连字符不敏感的补全。区分大小写的补全必须关闭。_和-是通用的
 # HYPHEN_INSENSITIVE="true"
-
-# 关闭每两周一次的自动检查更新
-# DISABLE_AUTO_UPDATE="true"
 
 # 关闭ls的颜色.
 # DISABLE_LS_COLORS="true"

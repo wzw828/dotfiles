@@ -1,14 +1,9 @@
-# Path to your oh-my-zsh installation.
 export ZSH=/Users/wzw/.oh-my-zsh
-
-# Theme
-# Look in ~/.oh-my-zsh/themes/
-# set "random", load a random theme each
 ZSH_THEME="zeta"
-# others:"ys, powerline, gentoo, avit, honukai"
 
-# 解决粘贴慢
-DISABLE_MAGIC_FUNCTIONS=true
+export UPDATE_ZSH_DAYS=14
+export LANG=en_US.UTF-8         # 手动设置语言环境
+DISABLE_MAGIC_FUNCTIONS=true    # 解决粘贴慢
 
 # Uncomment the following line to use case-sensitive completion
 # CASE_SENSITIVE="true"
@@ -19,9 +14,6 @@ DISABLE_MAGIC_FUNCTIONS=true
 
 # Uncomment the following line to disable bi-weekly auto-update checks.
 # DISABLE_AUTO_UPDATE="true"
-
-# Uncomment the following line to change how often to auto-update (in days).
-# export UPDATE_ZSH_DAYS=13
 
 # Uncomment the following line to disable colors in ls.
 # DISABLE_LS_COLORS="true"
@@ -76,8 +68,8 @@ export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.tuna.tsinghua.edu.cn/homebrew-bott
 
 # nvm and Node ----------
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # 直接从github安装时使用
-# . $(brew --prefix nvm)/nvm.sh  # brew安装时使用
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # git安装使用
+# . $(brew --prefix nvm)/nvm.sh  # brew安装使用
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" 
 #export NVM_NODEJS_ORG_MIRROR="https://npm.taobao.org/dist"
 export NVM_NODEJS_ORG_MIRROR="http://npm.taobao.org/mirrors/node"
@@ -128,8 +120,6 @@ export PKG_CONFIG_PATH="/usr/local/opt/ruby/lib/pkgconfig"
 # Calibre ----------
 export PATH=${PATH}:/Applications/Productivity/calibre.app/Contents/MacOS
 
-# 手动设置语言环境
-# export LANG=en_US.UTF-8
 
 # 本地和远程会话的首选编辑器
 # if [[ -n $SSH_CONNECTION ]]; then

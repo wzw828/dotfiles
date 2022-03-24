@@ -41,7 +41,7 @@ alias sgrep='grep -R -n -H -C 5 --exclude-dir={.git,.svn,.tldr,node_modules,Tras
 
 # 操作
 alias reboot='sudo reboot'
-alias poff='sudo poweroff'
+alias poweroff='sudo poweroff'
 alias cp='cp -iv'
 alias mv='mv -iv'
 alias ln='ln -iv'
@@ -62,10 +62,14 @@ alias disk='df -h | grep sd \
 alias alu='apt list --upgradable'
 
 # 快捷键
+alias v='nvim'
+alias vi='nvim'
+alias vim='nvim'
 alias cls='clear'
 alias e='exit'
-alias nvim_config='nvim ~/.SpaceVim.d/init.toml'
-alias ssh_config='sudo nvim /etc/ssh/ssh_config'
+alias zsh_config='vi ~/.zshrc'
+alias nvim_config='vi ~/.SpaceVim.d/init.toml'
+alias ssh_config='sudo vi /etc/ssh/ssh_config'
 
 # 解压缩
 alias gz='tar -xzvf'  #解压gz
@@ -74,9 +78,6 @@ alias zip='unzip'
 alias bz2='tar -xjvf'
 
 # Dev
-alias v='nvim'
-alias vi='nvim'
-alias vim='nvim'
 alias g='git'
 alias javac='javac -J-Dfile.encoding=utf8'
 alias npm_update='npm install npm -g'
@@ -88,6 +89,13 @@ alias preview='fzf --height=50% --layout=reverse --preview="bat --color=always {
 alias myip='curl cip.cc'    #显示公网ip
 alias ip-address='curl -s -H "Accept: application/json" https://ipinfo.io/json | jq "del(.loc, .postal, .readme)"'
 alias timer='echo "Timer started. Stop with Ctrl-D." && date "+%a, %d %b %H:%M:%S" && time cat && date "+%a, %d %b %H:%M:%S"'
+
+# mac显示/隐藏文件
+alias show='defaults write com.apple.finder AppleShowAllFiles -bool true'
+alias hide='defaults write com.apple.finder AppleShowAllFiles -bool false'
+
+# mac常用编辑器
+#alias code='/Applications/Dev/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code'
 
 # 指定程序打开文件
 # alias -s html=subl     #.html文件 sublime text 中打开

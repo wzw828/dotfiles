@@ -40,6 +40,8 @@ alias lagrep='ls -lA | grep'
 alias sgrep='grep -R -n -H -C 5 --exclude-dir={.git,.svn,.tldr,node_modules,Trash,vendor}'
 
 # 操作
+alias reboot='sudo reboot'
+alias poff='sudo poweroff'
 alias cp='cp -iv'
 alias mv='mv -iv'
 alias ln='ln -iv'
@@ -47,6 +49,7 @@ alias mkdir='mkdir -v'
 alias rm='rm -i'
 alias rmf='sh $HOME/.local/script/remove.sh'
 alias p='ps axo pid,user,pcpu,comm'
+
 alias uptime='uptime -p'
 alias free='free -h'
 alias disk='df -h | grep sd \
@@ -57,26 +60,34 @@ alias disk='df -h | grep sd \
     | sed -e "s_9[0-9]%_\x1b[31m&\x1b[0m_" \
     | sed -e "s_/mnt/[-_A-Za-z0-9]*_\x1b[34;1m&\x1b[0m_"'
 alias alu='apt list --upgradable'
-alias preview='fzf --height=50% --layout=reverse --preview="bat --color=always {}"'
-alias reboot='sudo reboot'
-alias poweroff='sudo poweroff'
 
 # 快捷键
 alias cls='clear'
 alias e='exit'
-alias myip='curl cip.cc'    #显示公网ip
-alias ip-address='curl -s -H "Accept: application/json" https://ipinfo.io/json | jq "del(.loc, .postal, .readme)"'
-alias timer='echo "Timer started. Stop with Ctrl-D." && date "+%a, %d %b %H:%M:%S" && time cat && date "+%a, %d %b %H:%M:%S"'
+alias nvim_config='nvim ~/.SpaceVim.d/init.toml'
+alias ssh_config='sudo nvim /etc/ssh/ssh_config'
+
+# 解压缩
 alias gz='tar -xzvf'  #解压gz
 alias tgz='tar -xzvf'  #解压gz
 alias zip='unzip'
 alias bz2='tar -xjvf'
 
-# Developer shortcuts
+# Dev
 alias v='nvim'
 alias vi='nvim'
+alias vim='nvim'
 alias g='git'
 alias javac='javac -J-Dfile.encoding=utf8'
+alias npm_update='npm install npm -g'
+alias pip_update='python -m pip install --upgrade pip'
+alias npm_update='npm install -g npm'
+
+# 其他
+alias preview='fzf --height=50% --layout=reverse --preview="bat --color=always {}"'
+alias myip='curl cip.cc'    #显示公网ip
+alias ip-address='curl -s -H "Accept: application/json" https://ipinfo.io/json | jq "del(.loc, .postal, .readme)"'
+alias timer='echo "Timer started. Stop with Ctrl-D." && date "+%a, %d %b %H:%M:%S" && time cat && date "+%a, %d %b %H:%M:%S"'
 
 # 指定程序打开文件
 # alias -s html=subl     #.html文件 sublime text 中打开

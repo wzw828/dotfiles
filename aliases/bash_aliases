@@ -1,4 +1,4 @@
-# 导航
+# {{导航 ----------
 alias ..='cd ..'
 alias .2='cd ../..'
 alias .3='cd ../../..'
@@ -10,13 +10,14 @@ alias c2='cd -2'
 alias c3='cd -3'
 alias c4='cd -4'
 alias c5='cd -5'
+# }}
 
-# 书签
+# 书签 ----------
 alias ~='cd ~'
 alias dl='cd ~/Downloads && ls -lA'
 alias doc='cd ~/Documents && ls -lA'
 
-# 终端返回显示
+# {{显示 ----------
 alias grep='grep --color=auto'
 alias l='ls -l'
 alias la='ls -a'
@@ -38,8 +39,9 @@ alias h='history'
 alias lgrep='ls -l | grep'
 alias lagrep='ls -lA | grep'
 alias sgrep='grep -R -n -H -C 5 --exclude-dir={.git,.svn,.tldr,node_modules,Trash,vendor}'
+# }}
 
-# 操作
+# {{操作 ----------
 alias reboot='sudo reboot'
 alias poweroff='sudo poweroff'
 alias cp='cp -iv'
@@ -47,9 +49,47 @@ alias mv='mv -iv'
 alias ln='ln -iv'
 alias mkdir='mkdir -v'
 alias rm='rm -i'
+alias cls='clear'
+alias e='exit'
+# }}
+
+# {{编辑 ----------
+alias v='nvim'
+alias vi='nvim'
+alias vim='nvim'
+# }}
+
+## 配置文件 ----------
+alias source_bashrc='source ~/.bashrc'
+alias bash_config='vi ~/.bashrc'
+alias alias_config='vi ~/.bash_aliases'
+alias zsh_config='vi ~/.zshrc'
+alias nvim_config='vi ~/.SpaceVim.d/init.toml'
+alias ssh_config='sudo vi /etc/ssh/ssh_config'
+# }}
+
+## {{解压缩 ----------
+alias gz='tar -xzvf'  #解压gz
+alias tgz='tar -xzvf'  #解压gz
+alias zip='unzip'
+alias bz2='tar -xjvf'
+# }}
+
+# {{Dev ----------
+alias g='git'
+alias javac='javac -J-Dfile.encoding=utf8'
+alias npm_update='npm install npm -g'
+alias pip_update='python -m pip install --upgrade pip'
+alias npm_update='npm install -g npm'
+# }}
+
+# {{其他 ----------
+alias preview='fzf --height=50% --layout=reverse --preview="bat --color=always {}"'
+alias myip='curl cip.cc'    #显示公网ip
+alias ip-address='curl -s -H "Accept: application/json" https://ipinfo.io/json | jq "del(.loc, .postal, .readme)"'
+alias timer='echo "Timer started. Stop with Ctrl-D." && date "+%a, %d %b %H:%M:%S" && time cat && date "+%a, %d %b %H:%M:%S"'
 alias rmf='sh $HOME/.local/script/remove.sh'
 alias p='ps axo pid,user,pcpu,comm'
-
 alias uptime='uptime -p'
 alias free='free -h'
 alias disk='df -h | grep sd \
@@ -60,44 +100,15 @@ alias disk='df -h | grep sd \
     | sed -e "s_9[0-9]%_\x1b[31m&\x1b[0m_" \
     | sed -e "s_/mnt/[-_A-Za-z0-9]*_\x1b[34;1m&\x1b[0m_"'
 alias alu='apt list --upgradable'
+# }}
 
-# 快捷键
-alias v='nvim'
-alias vi='nvim'
-alias vim='nvim'
-alias cls='clear'
-alias e='exit'
-alias zsh_config='vi ~/.zshrc'
-alias nvim_config='vi ~/.SpaceVim.d/init.toml'
-alias ssh_config='sudo vi /etc/ssh/ssh_config'
-
-# 解压缩
-alias gz='tar -xzvf'  #解压gz
-alias tgz='tar -xzvf'  #解压gz
-alias zip='unzip'
-alias bz2='tar -xjvf'
-
-# Dev
-alias g='git'
-alias javac='javac -J-Dfile.encoding=utf8'
-alias npm_update='npm install npm -g'
-alias pip_update='python -m pip install --upgrade pip'
-alias npm_update='npm install -g npm'
-
-# 其他
-alias preview='fzf --height=50% --layout=reverse --preview="bat --color=always {}"'
-alias myip='curl cip.cc'    #显示公网ip
-alias ip-address='curl -s -H "Accept: application/json" https://ipinfo.io/json | jq "del(.loc, .postal, .readme)"'
-alias timer='echo "Timer started. Stop with Ctrl-D." && date "+%a, %d %b %H:%M:%S" && time cat && date "+%a, %d %b %H:%M:%S"'
-
-# mac显示/隐藏文件
+# {{mac ----------
 alias show='defaults write com.apple.finder AppleShowAllFiles -bool true'
 alias hide='defaults write com.apple.finder AppleShowAllFiles -bool false'
-
-# mac常用编辑器
 #alias code='/Applications/Dev/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code'
+# }}
 
-# 指定程序打开文件
+# {{配置打开程序 ----------
 # alias -s html=subl     #.html文件 sublime text 中打开
 # alias -s rb=subl
 # alias -s py=subl
@@ -105,3 +116,4 @@ alias hide='defaults write com.apple.finder AppleShowAllFiles -bool false'
 # alias -s c=vim
 # alias -s java=vim
 # alias -s txt=vim
+# }}
